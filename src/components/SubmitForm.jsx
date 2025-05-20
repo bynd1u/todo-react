@@ -1,12 +1,14 @@
-import React from 'react'
+import React from "react";
 
 export const SubmitForm = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("Form submitted");
+  };
   return (
-    <div className='form'>
-        <form>
-            <input className='input' placeholder='Add Task' />
-            <button className='add-button' type='sumbit'>Add</button>
-        </form>
-    </div>
-  )
-}
+    <form onSubmit={handleSubmit}>
+      <input type="text" placeholder="Add todo" />
+      <button>Submit</button>
+    </form>
+  );
+};
