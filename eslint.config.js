@@ -16,6 +16,10 @@ export default [
         sourceType: 'module',
       },
     },
+    extends: [
+      'eslint:recommended',
+      'plugin:react/recommended',
+    ],
     plugins: {
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
