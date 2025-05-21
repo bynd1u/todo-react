@@ -1,11 +1,11 @@
 import React from "react";
 import { Item } from "./Item";
 
-export const ToDoList = ({ items }) => {
+export const ToDoList = ({ items, setTodos }) => {
   return (
     <ol className="todo-list">
       {items.map((item, index) => (
-        <Item key={index} item={item} />
+        <Item key={index} item={item} setTodos={setTodos} />
       ))}
     </ol>
   );

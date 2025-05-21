@@ -1,20 +1,10 @@
 import "./App.css";
-import Header from "./components/Header";
-import { SubmitForm } from "./components/SubmitForm";
-import { ToDoList } from "./components/ToDoList";
-
-const items = [
-  { id: 1, title: "Task1" },
-  { id: 2, title: "Task2" },
-  { id: 3, title: "task3" },
-];
+import { Home } from "./pages/Home";
 
 function App() {
   return (
     <>
-      <Header />
-      <SubmitForm />
-      <ToDoList items={items} />
+      <Home />
     </>
   );
 }

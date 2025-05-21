@@ -1,13 +1,23 @@
 import React from "react";
 
-export const SubmitForm = () => {
+export const SubmitForm = ({ setTodos }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Form submitted");
+
+    setTodos((prev) => [
+      ...prev,
+      {
+        id: self.crypto.randomUUID(),
+        title: event.target.todo.value,
+        completed: false,
+      },
+    ]);
+
+    event.target.reset();
   };
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" placeholder="Add todo" />
+      <input id="todo" type="text" placeholder="Add todo" />
       <button>Submit</button>
     </form>
   );
