@@ -16,6 +16,10 @@ export const Item = ({ item, setTodos }) => {
     setIsEdit(true);
   };
 
+  const handleDelete = () => {
+    setTodos((prev) => prev.filter((todo) => todo.id !== item.id));
+  };
+
   useEffect(() => {
     if (isEdit && inputRef) {
       inputRef.current.focus();
@@ -65,7 +69,7 @@ export const Item = ({ item, setTodos }) => {
           </button>
           <div className="item-right">
             <button onClick={handleEdit}>Edit</button>
-            <button>Delete</button>
+            <button onClick={handleDelete}>Delete</button>
           </div>
         </>
       )}
