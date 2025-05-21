@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const SubmitForm = ({ setTodos }) => {
+  const [inputValue, setInputValue] = useState("");
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -8,16 +10,23 @@ export const SubmitForm = ({ setTodos }) => {
       ...prev,
       {
         id: self.crypto.randomUUID(),
-        title: event.target.todo.value,
+        title: inputValue,
         completed: false,
       },
     ]);
+    console.log(inputValue);
 
-    event.target.reset();
+    setInputValue("");
   };
   return (
     <form onSubmit={handleSubmit}>
-      <input id="todo" type="text" placeholder="Add todo" />
+      <input
+        id="todo"
+        type="text"
+        placeholder="Add todo"
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+      />
       <button>Submit</button>
     </form>
   );
