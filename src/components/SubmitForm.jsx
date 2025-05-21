@@ -6,14 +6,18 @@ export const SubmitForm = ({ setTodos }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    setTodos((prev) => [
-      ...prev,
-      {
-        id: self.crypto.randomUUID(),
-        title: inputValue,
-        completed: false,
-      },
-    ]);
+    setTodos((prev) =>
+      inputValue
+        ? [
+            ...prev,
+            {
+              id: self.crypto.randomUUID(),
+              title: inputValue,
+              completed: false,
+            },
+          ]
+        : prev
+    );
     console.log(inputValue);
 
     setInputValue("");
