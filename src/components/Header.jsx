@@ -1,9 +1,9 @@
-import React from "react";
+import "./Header.css";
 
 function Header() {
   return (
     <>
-      <h1>TODO</h1>
+      <h1>TODOS</h1>
     </>
   );
 }

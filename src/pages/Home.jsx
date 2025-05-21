@@ -11,7 +11,7 @@ export const Home = () => {
     { id: self.crypto.randomUUID(), title: "task4", isCompleted: false },
   ]);
 
-  const completedTodos = todos.filter((todo) => todo.completed).length;
+  const completedTodos = todos.filter((todo) => todo.isCompleted).length;
   const totalTodos = todos.length;
 
   return (

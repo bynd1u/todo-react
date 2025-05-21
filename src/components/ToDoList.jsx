@@ -1,4 +1,4 @@
-import React from "react";
+import "./ToDoList.css";
 import { Item } from "./Item";
 
 export const ToDoList = ({ items, setTodos }) => {

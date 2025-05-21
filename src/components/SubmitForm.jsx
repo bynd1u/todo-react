@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import "./SubmitForm.css";
+import { useState } from "react";
 
 export const SubmitForm = ({ setTodos }) => {
   const [inputValue, setInputValue] = useState("");

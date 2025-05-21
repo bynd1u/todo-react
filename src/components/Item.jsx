@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+import "./Item.css";
+import { useEffect, useRef, useState } from "react";
 
 export const Item = ({ item, setTodos }) => {
   const [isEdit, setIsEdit] = useState(false);

@@ -1,4 +1,4 @@
-import React from "react";
+import "./Summary.css";
 
 export const Summary = ({ completedTodos, totalTodos }) => {
   return (
