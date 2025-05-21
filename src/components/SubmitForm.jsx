@@ -14,7 +14,7 @@ export const SubmitForm = ({ setTodos }) => {
             {
               id: self.crypto.randomUUID(),
               title: inputValue,
-              completed: false,
+              isCompleted: false,
             },
           ]
         : prev
